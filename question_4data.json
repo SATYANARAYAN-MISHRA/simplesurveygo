@@ -1,0 +1,26 @@
+{
+    "name": "movie-data",
+    "version": "0.0.1",
+    "description": "JSON data movis",
+    "main": "index.html",
+    "dependencies": {
+      "async": "^1.5.2",
+      "cheerio": "^0.20.0",
+      "request": "2.x"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "start": "node index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json"
+    },
+    "keywords": [
+      "movie",
+      "film",
+      "data",
+      "json"
+    ],
+}
