@@ -11,6 +11,22 @@ type UserCredentials struct {
 	Alias    string `json:"alias"`
 }
 
+type Movie struct {
+	ID          bson.ObjectId `bson:"_id" json:"id"`
+	Name        string        `bson:"name" json:"name"`
+	CoverImage  string        `bson:"cover_image" json:"cover_image"`
+	Description string        `bson:"description" json:"description"`
+}
+
+func AllMoviesEndPoint(w http.ResponseWriter, r * http.Request) {
+    movies, err: = dao.FindAll()
+    if err != nil {
+        respondWithError(w, http.StatusInternalServerError, err.Error())
+        return
+    }
+    respondWithJson(w, http.StatusOK, movies)
+}
+
 type Session struct {
 	Username string `json:"username"`
 	Token    string `json:"token"`
