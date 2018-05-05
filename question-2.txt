@@ -1,0 +1,47 @@
+
+There are many different ways to organize your Flask-RESTful app, but here we’ll describe one that scales pretty well with larger apps and maintains a nice level organization.
+
+The basic idea is to split your app into three main parts: the routes, the resources, and any common infrastructure.
+
+Here’s an example directory structure:
+
+
+myapi/
+    __init__.py
+    app.py          # this file contains your app and routes
+    resources/
+        __init__.py
+        foo.py      # contains logic for /Foo
+        bar.py      # contains logic for /Bar
+    common/
+        __init__.py
+        util.py 
+
+Class-Based :
+
+
+class Myclass(asas):
+    methods = ['GET']
+
+    def dispatch_request(self, name):
+        return 'Hello %s!' % name
+
+app.add_url_rule('/hello/<name>', view_func=Myclass.as_view('asas'))        
+        
+        
+ Like a regular class-based view but that dispatches requests to particular methods. For instance if you implement a method called get() it means it will respond to 'GET' requests and the dispatch_request() implementation will automatically forward your request to that. Also options is set for you automatically:
+
+class CounterAPI(MethodView):
+
+    def get(self):
+        return session.get('counter', 0)
+
+    def post(self):
+        session['counter'] = session.get('counter', 0) + 1
+        return 'OK'
+
+app.add_url_rule('/counter', view_func=CounterAPI.as_view('counter'))
+
+dispatch_request(*args, **kwargs)
+Subclasses have to override this method to implement the actual view function code. This method is called with all the arguments from the URL rule.
+
