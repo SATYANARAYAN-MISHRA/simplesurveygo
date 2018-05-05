@@ -1,0 +1,33 @@
+REST is used to build Web services that are lightweight,
+maintainable, and scalable in nature. A service which is built on the REST architecture is called a RESTful service.
+The underlying protocol for REST is HTTP, which is the basic web protocol.
+ REST stands for REpresentational State Transfer
+
+ Restful Methods:
+
+
+POST – This would be used to create a new employee using the RESTful web service
+GET - This would be used to get a list of all employee using the RESTful web service
+PUT - This would be used to update all employee using the RESTful web service
+DELETE - This would be used to delete all employee using the RESTful web service
+
+
+A RESTful web service (also called a RESTful web API) is a simple web service implemented using HTTP
+and the principles of REST. Such a web service can be thought about as a collection of resources.
+The definition of such a web service can be thought of as comprising three aspects:
+
+SOAP services offer more out-of-the-box features,
+the most important (imho, of course) of which is discovery.
+The ability to add a reference to a SOAP service in just about any dev environment
+and have it automatically generate a proxy class that will hide the underlying HTTP
+complexities, even to the point of serializing non-trivial types, is very,very useful.
+
+SOAP is a protocol. SOAP was designed with a specification.
+It includes a WSDL file which has the required information on what the web service does in addition to the location of the web service.
+
+REST is an Architectural style in which a web service can only be treated as a RESTful service if it follows the constraints of being
+Client Server
+Stateless
+Cacheable
+Layered System
+Uniform Interface
